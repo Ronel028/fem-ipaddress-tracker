@@ -78,7 +78,7 @@ searchButton.addEventListener('click', ()=>{
         .then(response =>{
             return response.json();
         }).then(data =>{
-            console.log(data);
+            //declare variable
             let ipAddress = document.querySelector('#ip-address');
             let time= document.querySelector('#time');
             let isp = document.querySelector('#isp');
@@ -86,20 +86,21 @@ searchButton.addEventListener('click', ()=>{
             let lat = data.location.lat;
             let long = data.location.lng;
 
+            //assign data to the varible and display to browser
             ipAddress.textContent = data.ip;
             let locationCountry = `${data.location.country} ${data.location.city}, ${data.location.region}`;
             location.innerHTML = locationCountry;
             time.textContent = "UTC" + data.location.timezone;
             isp.textContent = data.isp
 
-            // map location to locate ip address
+            //call function to locate ip address using latitude and longitude
             mapSetView(lat, long);
             locateLatLongMarker(lat, long).addTo(map);
 
             inputIp.value = '';
 
         }).catch(err =>{
-            console.log(err)
+            alert(err);
         })
     }
     
