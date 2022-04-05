@@ -1,0 +1,332 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+main {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+main .inputSection {
+  width: inherit;
+  background-image: url("../images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 2.125rem;
+  padding-bottom: 7.875rem;
+  position: relative;
+  z-index: 999;
+}
+
+main .inputSection .input-field {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .inputSection .input-field h1 {
+  font-size: 1.625rem;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1.8125rem;
+}
+
+main .inputSection .input-field .input {
+  width: 80%;
+  max-width: 31.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 36.5625rem) {
+  main .inputSection .input-field .input {
+    width: 100%;
+  }
+}
+
+main .inputSection .input-field .input input[type="text"] {
+  width: 100%;
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #2b2b2b;
+  padding: 1rem 1.625rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+@media screen and (max-width: 25rem) {
+  main .inputSection .input-field .input input[type="text"] {
+    font-size: 0.9375rem;
+    padding: 1rem 1.125rem;
+  }
+}
+
+main .inputSection .input-field .input input[type="text"]::-webkit-input-placeholder {
+  color: #969696;
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+main .inputSection .input-field .input input[type="text"]:-ms-input-placeholder {
+  color: #969696;
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+main .inputSection .input-field .input input[type="text"]::-ms-input-placeholder {
+  color: #969696;
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+main .inputSection .input-field .input input[type="text"]::placeholder {
+  color: #969696;
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 25rem) {
+  main .inputSection .input-field .input input[type="text"]::-webkit-input-placeholder {
+    font-size: 0.8125rem;
+  }
+  main .inputSection .input-field .input input[type="text"]:-ms-input-placeholder {
+    font-size: 0.8125rem;
+  }
+  main .inputSection .input-field .input input[type="text"]::-ms-input-placeholder {
+    font-size: 0.8125rem;
+  }
+  main .inputSection .input-field .input input[type="text"]::placeholder {
+    font-size: 0.8125rem;
+  }
+}
+
+main .inputSection .input-field .input #btn {
+  background-color: #2b2b2b;
+  border: none;
+  padding: 1.1875rem 1.4375rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+main .inputSection .input-field .input #btn:hover {
+  background-color: #4f4f4f;
+}
+
+main .inputSection .input-field .input #btn i {
+  font-size: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+main .inputSection .location-search {
+  width: 80%;
+  max-width: 1113px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2.0625rem;
+  padding-bottom: 2.0625rem;
+  padding-right: 9.125rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 1px 3px 21px -10px #2b2b2b;
+          box-shadow: 1px 3px 21px -10px #2b2b2b;
+  position: absolute;
+  bottom: -103px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (max-width: 72rem) {
+  main .inputSection .location-search {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 64.75rem) {
+  main .inputSection .location-search {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 61rem) {
+  main .inputSection .location-search {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 36.5625rem) {
+  main .inputSection .location-search {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 49.25rem) {
+  main .inputSection .location-search {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 0;
+    bottom: -169px;
+    gap: 7px;
+  }
+}
+
+@media screen and (max-width: 14.625rem) {
+  main .inputSection .location-search {
+    padding: 1.5625rem 0;
+  }
+}
+
+main .inputSection .location-search .ip-address, main .inputSection .location-search .location, main .inputSection .location-search .timezone, main .inputSection .location-search .ISP {
+  padding-left: 2rem;
+  padding-right: 5.375rem;
+}
+
+@media screen and (max-width: 57.75rem) {
+  main .inputSection .location-search .ip-address, main .inputSection .location-search .location, main .inputSection .location-search .timezone, main .inputSection .location-search .ISP {
+    padding-left: 1.5625rem;
+  }
+}
+
+@media screen and (max-width: 54.75rem) {
+  main .inputSection .location-search .ip-address, main .inputSection .location-search .location, main .inputSection .location-search .timezone, main .inputSection .location-search .ISP {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 53.75rem) {
+  main .inputSection .location-search .ip-address, main .inputSection .location-search .location, main .inputSection .location-search .timezone, main .inputSection .location-search .ISP {
+    padding-right: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 49.25rem) {
+  main .inputSection .location-search .ip-address, main .inputSection .location-search .location, main .inputSection .location-search .timezone, main .inputSection .location-search .ISP {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 23.125rem) {
+  main .inputSection .location-search #loc {
+    text-align: center;
+  }
+}
+
+main .inputSection .location-search .ip-address, main .inputSection .location-search .location, main .inputSection .location-search .timezone {
+  position: relative;
+}
+
+main .inputSection .location-search .ip-address::after, main .inputSection .location-search .location::after, main .inputSection .location-search .timezone::after {
+  content: "";
+  background-color: #dad8d8;
+  height: 100%;
+  width: 0.0625rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 49.25rem) {
+  main .inputSection .location-search .ip-address::after, main .inputSection .location-search .location::after, main .inputSection .location-search .timezone::after {
+    display: none;
+  }
+}
+
+main .inputSection .location-search h2 {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #969696;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  margin-bottom: 1.0625rem;
+}
+
+@media screen and (max-width: 49.25rem) {
+  main .inputSection .location-search h2 {
+    margin-bottom: 0.625rem;
+    font-size: 0.5625rem;
+  }
+}
+
+main .inputSection .location-search p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+@media screen and (max-width: 49.25rem) {
+  main .inputSection .location-search p {
+    margin-bottom: 0.625rem;
+    font-size: 0.9375rem;
+  }
+}
+
+main .map-section {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+main .map-section #map {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */

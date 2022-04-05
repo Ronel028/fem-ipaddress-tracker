@@ -1,0 +1,245 @@
+//******* function to convert px to rem ***********
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+
+//**************creating varibles******************
+// color
+$very-Dark-Gray: hsl(0, 0%, 17%);
+$Dark-Gray: hsl(0, 0%, 59%);
+
+//font
+$textInputSize: toRem(18);
+$fontRubik: 'Rubik', sans-serif;
+$fontBold: 700;
+$fontMeduim: 500;
+$fontRegular: 400;
+
+//**************************************************
+
+//my reset
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: $fontRubik;
+}
+
+//*****************************************************
+
+
+main{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    .inputSection{
+        width: inherit;
+        // height: 30vh;
+        background-image: url("../images/pattern-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: toRem(34);
+        padding-bottom: toRem(126);
+        position: relative;
+        z-index: 999;
+        .input-field{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1{
+                font-size: toRem(26);
+                color: white;
+                font-weight: $fontMeduim;
+                margin-bottom: toRem(29);
+            }
+            .input{
+                width: 80%;
+                max-width: toRem(499);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media screen and (max-width: toRem(585)){
+                    width: 100%;
+                }
+
+                input[type="text"]{
+                    width: 100%;
+                    font-size: toRem(18);
+                    font-family: $fontRubik;
+                    font-weight: $fontRegular;
+                    color: $very-Dark-Gray;
+                    padding: toRem(16) toRem(26);
+                    border: none;
+                    outline: none;
+                    border-top-left-radius: toRem(16);
+                    border-bottom-left-radius: toRem(16);
+
+                    @media screen and (max-width: toRem(400)){
+                        font-size: toRem(15);
+                        padding: toRem(16) toRem(18);
+                    }
+
+                    &::placeholder{
+                        color: $Dark-Gray;
+                        font-size: toRem(18);
+                        font-family: $fontRubik;
+                        font-weight: $fontRegular;
+
+                        @media screen and (max-width: toRem(400)){
+                            font-size: toRem(13);
+                        }
+                    }
+                }
+                #btn{
+                    background-color: $very-Dark-Gray;
+                    border: none;
+                    padding: toRem(19) toRem(23);
+                    border-top-right-radius: toRem(16);
+                    border-bottom-right-radius: toRem(16);
+                    transition: background 0.3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover{
+                       background-color: hsl(0, 0%, 31%);
+                    }
+
+                    i{
+                        font-size: toRem(16);
+                        color: white;
+                        font-weight: $fontBold;
+                    }
+                }
+            }
+        }
+
+        .location-search{
+            width: 80%;
+            max-width: 1113px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding-top: toRem(33);
+            padding-bottom: toRem(33);
+            // padding-left: toRem(32);
+            padding-right: toRem(146);
+            border-radius: toRem(16);
+            box-shadow: 1px 3px 21px -10px $very-Dark-Gray;
+
+            position: absolute;
+            bottom: -103px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media screen and (max-width: toRem(1152)){
+                width: 85%;
+            }
+            @media screen and (max-width: toRem(1036)){
+                width: 90%;
+            }
+            @media screen and (max-width: toRem(976)){
+                width: 95%;
+            }
+            @media screen and (max-width: toRem(585)){
+                width: 90%;
+            }
+            @media screen and (max-width: toRem(788)){
+                flex-direction: column;
+                align-items: center;
+                padding-right: 0;
+                bottom: -169px;
+                gap: 7px;
+            }
+            @media screen and (max-width: toRem(234)){
+                padding: toRem(25) 0;
+            }
+            .ip-address, .location, .timezone, .ISP{
+                padding-left: toRem(32);
+                padding-right: toRem(86);
+
+                @media screen and (max-width: toRem(924)){
+                    padding-left: toRem(25);
+                }
+                @media screen and (max-width: toRem(876)){
+                    padding-left: toRem(16);
+                }
+                @media screen and (max-width: toRem(860)){
+                    padding-right: toRem(56);
+                }
+                @media screen and (max-width: toRem(788)){
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+            }
+            #loc{
+                @media screen and (max-width: toRem(370)){
+                    text-align: center;
+                }
+            }
+            .ip-address, .location, .timezone{
+                position: relative;
+                &::after{
+                    content: "";
+                    background-color: hsl(0, 3%, 85%);
+                    height: 100%;
+                    width: toRem(1);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    @media screen and (max-width: toRem(788)){
+                        display: none;
+                    }
+                }
+            }
+            h2{
+                font-size: toRem(11);
+                font-weight: $fontBold;
+                color: $Dark-Gray;
+                text-transform: uppercase;
+                letter-spacing: toRem(3);
+                margin-bottom: toRem(17);
+                @media screen and (max-width: toRem(788)){
+                    margin-bottom: toRem(10);
+                    font-size: toRem(9);
+                }
+            }
+            p{
+                font-size: toRem(20);
+                font-weight: $fontBold;
+                color: $very-Dark-Gray;
+                @media screen and (max-width: toRem(788)){
+                    margin-bottom: toRem(10);
+                    font-size: toRem(15);
+                }
+            }
+
+        }
+    }
+    .map-section{
+        width: 100%;
+        height: 70vh;
+        position: relative;
+        #map{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    
+    
+}
